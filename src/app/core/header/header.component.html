@@ -1,0 +1,5 @@
+<div *ngFor="let navItem of navs" class="nav">
+  <div (click)="onNavClick(navItem.value)" class="nav-item">
+    {{ navItem.label }}
+  </div>
+</div>

@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav {
+  flex: 1;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.nav-item {
+  padding: 20px;
+  text-align: center;
+}
