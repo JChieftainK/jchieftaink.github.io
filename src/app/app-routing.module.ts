@@ -5,6 +5,10 @@ const routes: Routes = [
   {
     path: 'ui-playground',
     loadChildren: './features/ui-playground/ui-playground.module#UiPlaygroundModule'
+  },
+  {
+    path: 'financial',
+    loadChildren: './features/financial/financial.module#FinancialModule'
   }
 ];
 

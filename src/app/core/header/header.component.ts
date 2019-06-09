@@ -16,6 +16,10 @@ export class HeaderComponent implements OnInit {
     {
       label: 'UI Playground',
       value: '/ui-playground'
+    },
+    {
+      label: 'Financial',
+      value: '/financial'
     }
   ];
 
