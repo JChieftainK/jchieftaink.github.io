@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-receipt',
@@ -7,13 +7,18 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./receipt.component.scss']
 })
 export class ReceiptComponent implements OnInit {
-  applyToUser: string;
-  date = new FormControl(new Date());
+  finance = this.fb.group({
+    applyTo: [''],
+    date: [{value: new Date(), disabled: true}],
+    description: [''],
+    dollarAmount: [''],
+    category: ['']
+  });
   selectValue: string;
   items = [
     {value: 'housebill', viewValue: 'House Bill'}
   ];
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }
