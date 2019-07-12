@@ -1,12 +1,26 @@
-<p>
-  receipt works!
-</p>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" value="Sushi">
-  </mat-form-field>
+<mat-radio-group>
+  <mat-radio-button value="value1">Option1</mat-radio-button>
+  <mat-radio-button value="value2">Option2</mat-radio-button>
+</mat-radio-group>
 
-  <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Leave a comment"></textarea>
-  </mat-form-field>
-</form>
+<mat-form-field>
+  <input matInput [matDatepicker]="dp3" placeholder="Input disabled" disabled>
+  <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+  <mat-datepicker #dp3 touchUi disabled="false"></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput placeholder="description" value="value">
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput type="number" placeholder="money" value="0">
+</mat-form-field>
+
+<mat-select placeholder="Placeholder"  name="item">
+  <mat-option *ngFor="let item of items" [value]="item.value">
+    {{item.viewValue}}
+  </mat-option>
+</mat-select>
+
+<button mat-flat-button>Off To The Races</button>
