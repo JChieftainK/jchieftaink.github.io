@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'financial',
     loadChildren: './features/financial/financial.module#FinancialModule'
+  },
+  {
+    path: '**',
+    redirectTo: 'ui-playground'
   }
 ];
 
