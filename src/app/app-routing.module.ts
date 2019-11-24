@@ -4,11 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: 'ui-playground',
-    loadChildren: './features/ui-playground/ui-playground.module#UiPlaygroundModule'
+    loadChildren: () => import('./features/ui-playground/ui-playground.module').then(m => m.UiPlaygroundModule)
   },
   {
     path: 'financial',
-    loadChildren: './features/financial/financial.module#FinancialModule'
+    loadChildren: () => import('./features/financial/financial.module').then(m => m.FinancialModule)
   },
   {
     path: '**',
