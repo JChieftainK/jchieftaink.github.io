@@ -8,12 +8,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
 
 import { FinancialRoutingModule } from './financial-routing.module';
-import { ReceiptComponent } from './receipt/receipt.component';
+import { EstimatorInputComponent } from './estimator-input/estimator-input.component';
+import { MoneyEstimatorComponent } from './money-estimator/money-estimator.component';
+import { EstimatorDataTableComponent } from './estimator-data-table/estimator-data-table.component';
 
 @NgModule({
-  declarations: [ReceiptComponent],
+  declarations: [EstimatorInputComponent, MoneyEstimatorComponent, EstimatorDataTableComponent],
   imports: [
     CommonModule,
     FinancialRoutingModule,
@@ -23,6 +26,7 @@ import { ReceiptComponent } from './receipt/receipt.component';
     MatNativeDateModule,
     MatRadioModule,
     MatSelectModule,
+    MatTableModule,
     ReactiveFormsModule
   ]
 })

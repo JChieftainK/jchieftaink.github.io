@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ReceiptComponent } from './receipt/receipt.component';
+import { MoneyEstimatorComponent } from './money-estimator/money-estimator.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ReceiptComponent
+    component: MoneyEstimatorComponent
   }
 ];
 
